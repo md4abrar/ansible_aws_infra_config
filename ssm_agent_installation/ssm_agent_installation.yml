@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install Apache
+    yum:
+      name: httpd
+      state: present
+  - name: install Amazon SSM Agent
+    yum:
+      name: https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+      state: present
+  - name: Enable httpd
+    systemd:
+      name: httpd
+      enabled: yes
+  - name: Enable SSM Agent
+    systemd:
+      name: amazon-ssm-agent
+      enabled: yes
+
