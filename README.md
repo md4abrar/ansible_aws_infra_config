@@ -6,7 +6,7 @@ Dynamic inventory can be managed using __ec2.py__ script and the configurations 
 # cloudwatch_agent_installation 
 
 1. aws_agent_installation.yml is the agent installation playbook
-2. aws_cloudwatch_config.config has very basic cloudwatch agent loggin metric this can be tweaked as per use case.
+2. aws_cloudwatch_config.config has very basic cloudwatch agent loging metric this can be tweaked as per use case.
 
 # ssm_agent_installation
 
@@ -14,10 +14,10 @@ Dynamic inventory can be managed using __ec2.py__ script and the configurations 
 
 # Example : 
 
-    *List all hosts running in your AWS account*
+*List all hosts running in your AWS account*
 
-    ###### ansible -i ./ec2.py all --list  
+###### ansible -i ./ec2.py all --list  
 
-    *Install AWS Cloud watch Agent on all listed ec2 instances*
+*Install AWS Cloud watch Agent on all listed ec2 instances*
 
-    ###### ansible-playbook -i ./ec2.py aws_agent_installation.yml  
+###### ansible-playbook -i ./ec2.py aws_agent_installation.yml  
